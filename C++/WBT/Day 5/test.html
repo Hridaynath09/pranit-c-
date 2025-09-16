@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Operations</title>
+</head>
+<body>
+  <h2>Array Manipulation</h2>
+  <input type="text" id="arrayInput" placeholder="Enter a number">
+  <br><br>
+  <button onclick="addAtEnd()">Add at End</button>
+  <button onclick="addAtStart()">Add at Start</button>
+  <button onclick="deleteFromEnd()">Delete from End</button>
+  <button onclick="deleteFromStart()">Delete from Start</button>
+  <button onclick="displayOdd()">Display Odd Numbers</button>
+  <button onclick="displayEven()">Display Even Numbers</button>
+
+  <h3>Array Output:</h3>
+  <p id="output"></p>
+
+  <script>
+    let arr = [];
+
+    function getInputValue() {
+      return parseInt(document.getElementById("arrayInput").value);
+    }
+
+    function updateOutput(data) {
+      document.getElementById("output").textContent = data.join(", ");
+    }
+
+    function addAtEnd() {
+      const val = getInputValue();
+      if (!isNaN(val)) {
+        arr.push(val);
+        updateOutput(arr);
+      }
+    }
+
+    function addAtStart() {
+      const val = getInputValue();
+      if (!isNaN(val)) {
+        arr.unshift(val);
+        updateOutput(arr);
+      }
+    }
+
+    function deleteFromEnd() {
+      arr.pop();
+      updateOutput(arr);
+    }
+
+    function deleteFromStart() {
+      arr.shift();
+      updateOutput(arr);
+    }
+
+    function displayOdd() {
+      const odd = arr.filter(num => num % 2 !== 0);
+      updateOutput(odd);
+    }
+
+    function displayEven() {
+      const even = arr.filter(num => num % 2 === 0);
+      updateOutput(even);
+    }
+  </script>
+</body>
+</html>

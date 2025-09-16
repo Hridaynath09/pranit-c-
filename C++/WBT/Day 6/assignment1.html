@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style="background-color: beige;">
+
+    <h1 style="padding-top: 1%;">Data Management.</h1>
+    <div id="formContainer" style="background-color: rgb(188, 228, 215);">
+        <label for="fName">Enter First Name</label>
+        <input type="text" name="fName" id="fName"><br>
+        <label for="lName">Enter Last Name</label>
+        <input type="text" name="lName" id="lName"><br>
+        <label for="email">Enter Email iD</label>
+        <input type="text" name="email" id="email"><br>
+        <label for="uDOB">Enter DOB</label>
+        <input type="date" name="uDOB" id="uDOB"><br>
+        
+        <button onclick="addData()">Add</button>
+        <p id="p1" style="padding-bottom: 2%; visibility: hidden;">Data</p> 
+        
+    </div>
+
+    <p id="errorMsg" class="error"></p>
+
+    <div style="background-color: rgb(230, 173, 98);">
+        <h3 style="padding-top: 0.5%;">Employee Data</h3>
+        <table id="employeeTable" style="display: none;">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+
+
+    <p id="timer">Timer: </p>
+    
+    
+    
+
+
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    
+   
+</body>
+
+
+</html>

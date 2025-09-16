@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Page</title>
+</head>
+
+<body>
+  <form onsubmit="validateForm()" method="post">
+    <label>Name: </label>
+    <input type="text" id="name"><br>
+    <pre></pre>
+    <label>Age</label>
+    <input type="text" id="age"><br>
+    <pre></pre>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const age = document.getElementById("age").value;
+
+      if (name === "" || age === "") {
+        alert("Please enter both name and age.");
+        return false;
+      }
+
+      if (isNaN(age) || age <= 0) {
+        alert("Please enter a valid age.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+
+</html>
+<html>

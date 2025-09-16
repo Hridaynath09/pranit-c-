@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Data and Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+
+    }
+
+    .corner-box {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: coral;
+    }
+
+    #box1,
+    #box2 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(56, 118, 122);
+      top: 100px;
+    }
+
+    #box2 {
+      background-color: rgb(218, 40, 40);
+      bottom: 200px;
+    }
+
+    form {
+      margin-top: 150px;
+    }
+
+    input {
+      margin: 5px;
+      padding: 5px;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 50%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    th,
+    td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+
+    #username {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="box1" class="corner-box"></div>
+  <div id="box2" class="corner-box"></div>
+
+
+  <form id="userForm" style="text-align: center;">
+    <input type="text" id="firstName" placeholder="First Name" required>
+    <input type="text" id="lastName" placeholder="Last Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <button type="button" onclick="handleClick()">Submit</button>
+  </form>
+
+  <div id="username" style="text-align: center;"></div>
+
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="script.js"></script>
+  <script src="script1.js"></script>
+
+
+
+
+</body>
+
+</html>
